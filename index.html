@@ -48,9 +48,25 @@
       margin: 0 auto 20px;
     }
 
-    h1 {
+    /* 🔥 Coming Soon Fade + Glow */
+    .coming-soon {
       font-size: 3rem;
       margin-bottom: 0.5rem;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 1.5s ease-out forwards;
+      text-shadow:
+        0 0 5px #0ff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 40px #0ff;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     p {
@@ -109,8 +125,8 @@
     <!-- Logo -->
     <img class="logo" src="logo.png" alt="NeighborhoodPCRepair Logo" />
 
-    <!-- Heading -->
-    <h1>Neighborhood PC Repair is Coming Soon</h1>
+   <!-- Fade + Glow "Coming Soon" Message -->
+    <h1 class="coming-soon">Neighborhood PC Repair is Coming Soon</h1>
     <p>Your friendly Neighborhood PC Repair team is working on something awesome! </p>
     <p>Contact us below while we're getting ready.</p>
 
@@ -128,6 +144,7 @@
   </div>
 </body>
 </html>
+
 
 
 
